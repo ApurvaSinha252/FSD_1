@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSE-DS</title>
+    <style>
+       .navbar{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        cursor: pointer;
+        background-color: rgb(160, 16, 16);
+        color: white;
+        padding:20px;
+       }
+       .navbar ul{
+        display: flex;
+        list-style: none;
+        margin: 20px 0px;
+       }
+       .button{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Baloo Bhai', cursive;
+        padding: 0px 20px;
+        border: 2px solid white;
+        border-radius: 20px;
+        margin: 0px 10px;
+       }
+       .backimage{
+        height: 400px;
+        background-image: url('https://static.boostmytalent.com/img/univ/abes-engineering-college-ghaziabad-campus-admission.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       }
+       .card-box{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        justify-items: center;
+       }
+       .card{
+        border: 2px solid rgb(184, 69, 69);
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+        width : 300px;
+        height: 300px;
+        
+       }
+       .card img{
+        width: 100%;
+        height: 200px;
+       }
+    </style>
 </head>
 <body>
-    
+    <div class="navbar">
+        <section>
+            <h1 style="color: white;">CSE-DS</h1>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="main.html" class="button">Home</a></li>
+                <li><a href="about.html" class="button">About</a></li>
+                <li><a href="students.html" class="button">Students</a></li>
+                <li><a href="contact.html" class="button">Contact</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="backimage">
+        <h1 style="text-align: center;">Welcome to CSE-DS Department !</h1>
+
+    </div>
+    <div class="card-box">
+        <div class="card">
+            <img src="https://thumbs.dreamstime.com/b/skills-icon-check-sign-skilled-employee-approved-confirm-done-tick-completed-symbol-capability-faculty-expertise-ability-287631058.jpg">
+            <h3>Faculties</h3>
+            <p>30</p>
+        </div>
+        <div class="card">
+            <img src="https://logowik.com/content/uploads/images/university-student6136.logowik.com.webp">
+            <h3>Students</h3>
+            <p>300</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/7870/7870706.png">
+            <h3>Placements</h3>
+            <p>Average : 6 LPA</p>
+     </div>
 </body>
 </html>
