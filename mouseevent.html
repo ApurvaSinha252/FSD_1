@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(169, 37, 37);
+            border: 2px solid rgb(3, 3, 3);
+            margin: 300px 0 0 300px;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function eventcall()
+        {
+            alert("These are mouse events");
+        }
+        function eventcall1()
+        {
+            alert("These are mouse events 2");
+        }
+        function eventcall2()
+        {
+            alert("These are mouse events 3");
+        }
+    </script>
+</head>
+<body>
+    <!--
+    <div id="box" onclick="eventcall()">
+        This is section A box.
+    </div>
+    -->
+    <!--
+    <div id="box" onmouseover="eventcall()">
+        This is section A box.
+    </div>
+    -->
+    <!--
+    <div id="box" ondblclick="eventcall2()">
+      This is section A box.
+    </div>
+    -->
+    <!--
+    <div id="box" onmouseout="eventcall1()">
+        This is section A box.
+    </div>
+    -->
+    <div id="box"  onmouseup="eventcall1()">
+        This is section A box.
+    </div>
+    <p oncontextmenu="eventcall2()">helloo</p>
+    <p onmouseover="eventcall1()">This is section B</p>
+</body>
+</html>
