@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Window Events</title>
+    <style>
+        body{
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+    <button onclick="window.open('https://www.google.com')">
+        Open Google
+    </button>
+    <br><br>
+    <button onclick="openNewWindow()">
+        Open New Window
+    </button>
+    <br><br>
+    <button onclick="openABES()">
+        Open ABES
+    </button>
 </body>
+<script>
+    function openNewWindow(){
+        window.open("","HELLO","width=400px,height=400px");
+    }
+    function openABES(){
+        window.open("https://www.abes.ac.in/","ABES","width=400px,height=400px");
+    }
+</script>
 </html>
