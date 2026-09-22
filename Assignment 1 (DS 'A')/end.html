@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Recorded</title>
+
+    <style>
+        body {
+            background-color: rgb(213, 224, 247);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        .message {
+            background-color: white;
+            width: 500px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="message">
+        <h1>Your Response Has Been Recorded!</h1>
+
+        <p>Your Score:</p>
+
+        <h2 id="score"></h2>
+
+        <p>Your Grade:</p>
+
+        <h2 id="grade"></h2>
+
+        <p>Thank you for completing the quiz.</p>
+    </div>
+
+    <script>
+
+        let params = new URLSearchParams(window.location.search);
+
+        let score = params.get("score");
+        let grade = params.get("grade");
+
+        document.getElementById("score").innerHTML = score + " / 10";
+
+        document.getElementById("grade").innerHTML = grade;
+
+    </script>
+
+</body>
+</html>
