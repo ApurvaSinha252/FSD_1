@@ -1,32 +1,77 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FSD Quiz</title>
     <link rel="stylesheet" href="quiz_info.css">
     <script src="quiz.js"></script>
 </head>
+
 <body>
-    <h1>FSD(Assignment 1) Quiz </h1>
-    <div class = "studentinfo">
-        <form>
-            <label for="name" class="form-group">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
-            <br>
-            <label for="roll" class="form-group">Roll Number:</label>
-            <input type="text" id="roll" name="roll" required placeholder="Enter your roll number">
-            <br>
-            <label for="branch" class="form-group">Branch:</label>
-            <input type="text" id="branch" name="branch" required placeholder="Enter your branch">
-            <br>
-            <label for="sec" class="form-group">Section:</label>
-            A<input type="radio" id="sec" name="sec" value="A">
-            B<input type="radio" id="sec" name="sec" value="B"> 
-            C<input type="radio" id="sec" name="sec" value="C">
-           <br><br>
-            <div id="button" class="button" onclick="enter()">Start Quiz</div>
-        </form>
+
+    <div class="page">
+
+        <div class="heading">
+            <h1>FSD Assignment 1</h1>
+            <p>Online Quiz</p>
+        </div>
+
+        <div class="studentinfo">
+
+            <h2>Student Information</h2>
+
+            <form>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="roll">Roll Number</label>
+                    <input type="text" id="roll" name="roll" required placeholder="Enter your roll number">
+                </div>
+
+                <div class="form-group">
+                    <label for="branch">Branch</label>
+                    <input type="text" id="branch" name="branch" required placeholder="Enter your branch">
+                </div>
+
+                <div class="form-group">
+                    <label>Section</label>
+
+                    <div class="sections">
+
+                        <label class="section-option">
+                            <input type="radio" name="sec" value="A" required>
+                            <span>A</span>
+                        </label>
+
+                        <label class="section-option">
+                            <input type="radio" name="sec" value="B">
+                            <span>B</span>
+                        </label>
+
+                        <label class="section-option">
+                            <input type="radio" name="sec" value="C">
+                            <span>C</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div id="button" class="button" onclick="enter()">
+                    Start Quiz
+                </div>
+
+            </form>
+
+        </div>
+
     </div>
+
 </body>
 </html>
+```

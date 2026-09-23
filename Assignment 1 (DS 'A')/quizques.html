@@ -3,95 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="quiz.js"></script>
+    <title>Quiz</title>
+    <script src="quiz.js" defer></script>
     <link rel="stylesheet" href="quizques.css">
 </head>
+
 <body>
+
     <h2>Read the questions carefully before starting the quiz</h2>
+
     <div class="questions">
-        <form>
-            <label for="question1" class="ques" id="q1">1. What does HTML stand for?</label>
-            <br>
-            <input type="radio" class="options" name="question1" value="Hyper Text Markup Language">Hyper Text Markup Language<br>
-            <input type="radio" class="options" name="question1" value="High Text Markup Language">High Text Markup Language<br>
-            <input type="radio" class="options" name="question1" value="Hyperlink Text Management Language">Hyperlink Text Management Language<br>
-            <input type="radio" class="options" name="question1" value="Home Text Markup Language">Home Text Markup Language<br>
-            <br><br>
 
-            <label for="question2" class="ques" id="q2">2. What does CSS stand for?</label>
-            <br>
-            <input type="radio" class="options" name="question2" value="Cascading Style Sheets">Cascading Style Sheets<br>
-            <input type="radio" class="options" name="question2" value="Creative Style Sheets">Creative Style Sheets<br>
-            <input type="radio" class="options" name="question2" value="Computer Style Sheets">Computer Style Sheets<br>
-            <input type="radio" class="options" name="question2" value="Colorful Style Sheets">Colorful Style Sheets<br>
-            <br><br>
+        <div id="timer">Time Left: 01:00</div>
 
-            <label for="question3" class="ques" id="q3">3. What does JS stand for?</label>
-            <br>
-            <input type="radio" class="options" name="question3" value="JavaScript">JavaScript<br>
-            <input type="radio" class="options" name="question3" value="Java Source">Java Source<br>
-            <input type="radio" class="options" name="question3" value="Java System">Java System<br>
-            <input type="radio" class="options" name="question3" value="Junction Script">Junction Script<br>
-            <br><br>
+        <form id="quizForm">
 
-            <label for="question4" class="ques" id="q4">4. Which HTML tag is used to create a hyperlink?</label>
-            <br>
-            <input type="radio" class="options" name="question4" value="a">&lt;a&gt; <br>
-            <input type="radio" class="options" name="question4" value="link">&lt;link&gt;<br>
-            <input type="radio" class="options" name="question4" value="href">&lt;href&gt;<br>
-            <input type="radio" class="options" name="question4" value="url">&lt;url&gt;<br>
-            <br><br>
+            <div class="questionBox">
+                <label class="ques">1. What does HTML stand for?</label>
 
-            <label for="question5" class="ques" id="q5">5. Which language is used to add interactivity to a webpage?</label>
-            <br>
-            <input type="radio" class="options" name="question5" value="HTML">HTML<br>
-            <input type="radio" class="options" name="question5" value="CSS">CSS<br>
-            <input type="radio" class="options" name="question5" value="JavaScript">JavaScript<br>
-            <input type="radio" class="options" name="question5" value="SQL">SQL<br>
-            <br><br>
+                <div class="optionsingle" data-value="Hyper Text Markup Language">
+                    Hyper Text Markup Language
+                </div>
 
-            <label for="question6" class="ques" id="q6">6. Which HTML tag is used to insert an image?</label>
-            <br>
-            <input type="radio" class="options" name="question6" value="img">&lt;img&gt;<br>
-            <input type="radio" class="options" name="question6" value="image">&lt;image&gt;<br>
-            <input type="radio" class="options" name="question6" value="pic">&lt;pic&gt;<br>
-            <input type="radio" class="options" name="question6" value="src">&lt;src&gt;<br>
-            <br><br>
+                <div class="optionsingle" data-value="High Text Markup Language">
+                    High Text Markup Language
+                </div>
 
-            <label for="question7" class="ques" id="q7">7. Which CSS property is used to change text color?</label>
-            <br>
-            <input type="radio" class="options" name="question7" value="font-color">font-color<br>
-            <input type="radio" class="options" name="question7" value="text-color">text-color<br>
-            <input type="radio" class="options" name="question7" value="color">color<br>
-            <input type="radio" class="options" name="question7" value="background-color">background-color<br>
-            <br><br>
+                <div class="optionsingle" data-value="Hyperlink Text Management Language">
+                    Hyperlink Text Management Language
+                </div>
 
-            <label for="question8" class="ques" id="q8">8. Which symbol is used to select an ID in CSS?</label>
-            <br>
-            <input type="radio" class="options" name="question8" value=".">.<br>
-            <input type="radio" class="options" name="question8" value="#">#<br>
-            <input type="radio" class="options" name="question8" value="*">*<br>
-            <input type="radio" class="options" name="question8" value="@">@<br>
-            <br><br>
+                <div class="optionsingle" data-value="Home Text Markup Language">
+                    Home Text Markup Language
+                </div>
+            </div>
 
-            <label for="question9" class="ques" id="q9">9. Which keyword is used to declare a constant in JavaScript?</label>
-            <br>
-            <input type="radio" class="options" name="question9" value="var">var<br>
-            <input type="radio" class="options" name="question9" value="let">let<br>
-            <input type="radio" class="options" name="question9" value="const">const<br>
-            <input type="radio" class="options" name="question9" value="constant">constant<br>
-            <br><br>
 
-            <label for="question10" class="ques" id="q10">10. Which HTTP method is commonly used to retrieve data?</label>
-            <br>
-            <input type="radio" class="options" name="question10" value="POST">POST<br>
-            <input type="radio" class="options" name="question10" value="GET">GET<br>
-            <input type="radio" class="options" name="question10" value="DELETE">DELETE<br>
-            <input type="radio" class="options" name="question10" value="PUT">PUT<br>
-            <br><br> 
-            <button type="button" id="button" onclick="submitQuiz()">Submit Quiz</button>
-            </form>
+            <div class="questionBox">
+                <label class="ques">2. What does CSS stand for?</label>
+
+                <div class="optionsingle" data-value="Cascading Style Sheets">
+                    Cascading Style Sheets
+                </div>
+
+                <div class="optionsingle" data-value="Creative Style Sheets">
+                    Creative Style Sheets
+                </div>
+
+                <div class="optionsingle" data-value="Computer Style Sheets">
+                    Computer Style Sheets
+                </div>
+
+                <div class="optionsingle" data-value="Colorful Style Sheets">
+                    Colorful Style Sheets
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">3. What does JS stand for?</label>
+
+                <div class="optionsingle" data-value="JavaScript">
+                    JavaScript
+                </div>
+
+                <div class="optionsingle" data-value="Java Source">
+                    Java Source
+                </div>
+
+                <div class="optionsingle" data-value="Java System">
+                    Java System
+                </div>
+
+                <div class="optionsingle" data-value="Junction Script">
+                    Junction Script
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">4. Which HTML tag is used to create a hyperlink?</label>
+
+                <div class="optionsingle" data-value="a">
+                    &lt;a&gt;
+                </div>
+
+                <div class="optionsingle" data-value="link">
+                    &lt;link&gt;
+                </div>
+
+                <div class="optionsingle" data-value="href">
+                    &lt;href&gt;
+                </div>
+
+                <div class="optionsingle" data-value="url">
+                    &lt;url&gt;
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">5. Which language is used to add interactivity to a webpage?</label>
+
+                <div class="optionsingle" data-value="HTML">
+                    HTML
+                </div>
+
+                <div class="optionsingle" data-value="CSS">
+                    CSS
+                </div>
+
+                <div class="optionsingle" data-value="JavaScript">
+                    JavaScript
+                </div>
+
+                <div class="optionsingle" data-value="SQL">
+                    SQL
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">6. Which HTML tag is used to insert an image?</label>
+
+                <div class="optionsingle" data-value="img">
+                    &lt;img&gt;
+                </div>
+
+                <div class="optionsingle" data-value="image">
+                    &lt;image&gt;
+                </div>
+
+                <div class="optionsingle" data-value="pic">
+                    &lt;pic&gt;
+                </div>
+
+                <div class="optionsingle" data-value="src">
+                    &lt;src&gt;
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">7. Which CSS property is used to change text color?</label>
+
+                <div class="optionsingle" data-value="font-color">
+                    font-color
+                </div>
+
+                <div class="optionsingle" data-value="text-color">
+                    text-color
+                </div>
+
+                <div class="optionsingle" data-value="color">
+                    color
+                </div>
+
+                <div class="optionsingle" data-value="background-color">
+                    background-color
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">8. Which symbol is used to select an ID in CSS?</label>
+
+                <div class="optionsingle" data-value=".">
+                    .
+                </div>
+
+                <div class="optionsingle" data-value="#">
+                    #
+                </div>
+
+                <div class="optionsingle" data-value="*">
+                    *
+                </div>
+
+                <div class="optionsingle" data-value="@">
+                    @
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">9. Which keyword is used to declare a constant in JavaScript?</label>
+
+                <div class="optionsingle" data-value="var">
+                    var
+                </div>
+
+                <div class="optionsingle" data-value="let">
+                    let
+                </div>
+
+                <div class="optionsingle" data-value="const">
+                    const
+                </div>
+
+                <div class="optionsingle" data-value="constant">
+                    constant
+                </div>
+            </div>
+
+
+            <div class="questionBox">
+                <label class="ques">10. Which HTTP method is commonly used to retrieve data?</label>
+
+                <div class="optionsingle" data-value="POST">
+                    POST
+                </div>
+
+                <div class="optionsingle" data-value="GET">
+                    GET
+                </div>
+
+                <div class="optionsingle" data-value="DELETE">
+                    DELETE
+                </div>
+
+                <div class="optionsingle" data-value="PUT">
+                    PUT
+                </div>
+            </div>
+
+
+            <div class="navigation">
+                <button type="button" id="previousButton">Previous</button>
+                <button type="button" id="nextButton">Next</button>
+                <button type="button" id="button">Submit Quiz</button>
+            </div>
+
+        </form>
+
     </div>
+
 </body>
 </html>

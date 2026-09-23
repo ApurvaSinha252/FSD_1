@@ -1,38 +1,73 @@
-       body{
-            background-color: #93c8cf;
-        }
-        h1{
-            text-align: center;
-        }
-        #button{
-            background-color: brown;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .form-group{
-            margin-bottom: 10px;
-        }
-        label{
-            display: block;
-            margin-bottom: 5px;
-        }
-        input{
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .studentinfo
-        {
-            width: 400px;
-            margin: 100px auto 0 auto;
-            background-color: rgb(239, 235, 235);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            color: rgb(16, 15, 15);
-        }
+
+body
+{
+    background-color: #93c8cf;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    margin-top: 40px;
+}
+
+#button
+{
+    background-color: brown;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    margin: 25px auto 0 auto;
+    box-sizing: border-box;
+}
+
+#button:hover
+{
+    background-color: #7b1f1f;
+}
+
+.studentinfo
+{
+    width: 400px;
+    margin: 50px auto 0 auto;
+    background-color: rgb(239, 235, 235);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: rgb(16, 15, 15);
+    box-sizing: border-box;
+}
+
+.form-group
+{
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input[type="text"]
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+input[type="radio"]
+{
+    width: auto;
+    margin: 0 5px 0 12px;
+}
+
+form
+{
+    width: 100%;
+}

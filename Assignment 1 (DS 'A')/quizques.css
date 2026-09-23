@@ -1,38 +1,102 @@
- body{
-            background-color: rgb(213, 224, 247);
-            color: rgb(19, 18, 18);
-        }
-        .questions{
-            width: 800px;
-            margin: 0px auto 0 auto;
-            background-color: rgb(223, 236, 241);
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .ques{
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .options{
-            margin-right: 10px;
-        }
-        h2
-        {
-            text-align: center;
-        }
-        #button { 
-            width: 150px; 
-            margin: 25px auto 0; 
-            padding: 12px; 
-            text-align: center; 
-            background-color: #2c3e50; 
-            color: white; 
-            border-radius: 8px;
-            cursor: pointer; 
-            font-size: 17px; 
-            font-weight: bold; 
-        }
-        #button:hover { 
-            background-color: #1f2d3a; 
-        }
+body
+{
+    background-color: rgb(213, 224, 247);
+    color: rgb(19, 18, 18);
+    margin: 0;
+    padding: 0;
+}
+
+h2
+{
+    text-align: center;
+    margin: 25px 0;
+}
+
+.questions
+{
+    width: 800px;
+    margin: 30px auto;
+    background-color: rgb(223, 236, 241);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#timer
+{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.questionBox
+{
+    width: 100%;
+}
+
+.ques
+{
+    display: block;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.optionsingle
+{
+    display: block;
+    border: 2px solid seagreen;
+    border-radius: 5px;
+    width: 500px;
+    margin: 10px auto;
+    font-size: 20px;
+    padding: 12px;
+    text-align: left;
+    background-color: rgb(254, 248, 241);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.optionsingle:hover
+{
+    background-color: rgb(248, 241, 232);
+}
+
+.optionsingle.selected
+{
+    background-color: seagreen;
+    color: white;
+    border-color: seagreen;
+}
+
+.navigation
+{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.navigation button
+{
+    padding: 12px 25px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.navigation button:hover
+{
+    background-color: #1f2d3a;
+}
+
+#button
+{
+    display: none;
+}

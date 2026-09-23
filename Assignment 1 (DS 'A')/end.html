@@ -3,67 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Response Recorded</title>
-
-    <style>
-        body {
-            background-color: rgb(213, 224, 247);
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 150px;
-        }
-
-        .message {
-            background-color: white;
-            width: 500px;
-            margin: auto;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-
-        h1 {
-            color: #2c3e50;
-        }
-
-        p {
-            font-size: 18px;
-        }
-
-        h2 {
-            font-size: 28px;
-            color: #2c3e50;
-        }
-    </style>
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="end.css">
 </head>
 
 <body>
 
-    <div class="message">
-        <h1>Your Response Has Been Recorded!</h1>
+    <div class="result-container">
 
-        <p>Your Score:</p>
+        <div class="result-header">
+            <h1>Quiz Completed!</h1>
+            <p>Your response has been recorded.</p>
 
-        <h2 id="score"></h2>
+            <div class="result-box">
+                <div>
+                    <span>Score</span>
+                    <strong id="score"></strong>
+                </div>
 
-        <p>Your Grade:</p>
+                <div>
+                    <span>Grade</span>
+                    <strong id="grade"></strong>
+                </div>
+            </div>
+        </div>
 
-        <h2 id="grade"></h2>
+        <div class="review">
 
-        <p>Thank you for completing the quiz.</p>
+            <h2>Answer Review</h2>
+
+            <div id="questions"></div>
+
+        </div>
+
     </div>
 
     <script>
-
         let params = new URLSearchParams(window.location.search);
 
         let score = params.get("score");
         let grade = params.get("grade");
 
-        document.getElementById("score").innerHTML = score + " / 10";
+        let selectedAnswers = [];
 
+        for (let i = 0; i < 10; i++)
+        {
+            selectedAnswers.push(
+                params.get("q" + i) || "Not Attempted"
+            );
+        }
+
+        let questions = [
+            "What does HTML stand for?",
+            "What does CSS stand for?",
+            "What does JS stand for?",
+            "Which HTML tag is used to create a hyperlink?",
+            "Which language is used to add interactivity to a webpage?",
+            "Which HTML tag is used to insert an image?",
+            "Which CSS property is used to change text color?",
+            "Which symbol is used to select an ID in CSS?",
+            "Which keyword is used to declare a constant in JavaScript?",
+            "Which HTTP method is commonly used to retrieve data?"
+        ];
+
+        let correctAnswers = [
+            "Hyper Text Markup Language",
+            "Cascading Style Sheets",
+            "JavaScript",
+            "a",
+            "JavaScript",
+            "img",
+            "color",
+            "#",
+            "const",
+            "GET"
+        ];
+
+        document.getElementById("score").innerHTML = score + " / 10";
         document.getElementById("grade").innerHTML = grade;
 
+        let questionContainer = document.getElementById("questions");
+
+        for (let i = 0; i < questions.length; i++)
+        {
+            let isCorrect = selectedAnswers[i] === correctAnswers[i];
+
+            let card = document.createElement("div");
+
+            card.className = isCorrect
+                ? "question-card correct"
+                : "question-card wrong";
+
+            let status = isCorrect ? "✓ Correct" : "✗ Wrong";
+
+            card.innerHTML =
+                '<div class="question-top">' +
+                '<h3>Question ' + (i + 1) + '</h3>' +
+                '<span class="status">' + status + '</span>' +
+                '</div>' +
+
+                '<p class="question">' +
+                questions[i] +
+                '</p>' +
+
+                '<p>' +
+                '<strong>Your Answer:</strong> ' +
+                selectedAnswers[i] +
+                '</p>' +
+
+                '<p>' +
+                '<strong>Correct Answer:</strong> ' +
+                correctAnswers[i] +
+                '</p>';
+
+            questionContainer.appendChild(card);
+        }
     </script>
 
 </body>

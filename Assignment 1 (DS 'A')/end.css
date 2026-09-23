@@ -1,0 +1,173 @@
+body
+{
+    background-color: rgb(213, 224, 247);
+    color: rgb(19, 18, 18);
+    margin: 0;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+.result-container
+{
+    width: 850px;
+    margin: auto;
+}
+
+.result-header
+{
+    background-color: rgb(223, 236, 241);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.result-header h1
+{
+    margin: 0;
+    color: #2c3e50;
+    font-size: 34px;
+}
+
+.result-header p
+{
+    font-size: 17px;
+}
+
+.result-box
+{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.result-box div
+{
+    width: 180px;
+    padding: 18px;
+    background-color: rgb(254, 248, 241);
+    border: 2px solid seagreen;
+    border-radius: 10px;
+}
+
+.result-box span
+{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.result-box strong
+{
+    display: block;
+    font-size: 28px;
+    color: #2c3e50;
+}
+
+.review
+{
+    margin-top: 30px;
+    background-color: rgb(223, 236, 241);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.review h2
+{
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.question-card
+{
+    background-color: rgb(254, 248, 241);
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border-left: 7px solid;
+}
+
+.question-card.correct
+{
+    border-left-color: seagreen;
+}
+
+.question-card.wrong
+{
+    border-left-color: #c0392b;
+}
+
+.question-top
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.question-top h3
+{
+    margin: 0;
+    color: #2c3e50;
+}
+
+.status
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.correct .status
+{
+    color: seagreen;
+}
+
+.wrong .status
+{
+    color: #c0392b;
+}
+
+.question
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 15px;
+}
+
+.question-card p
+{
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+@media (max-width: 900px)
+{
+    .result-container
+    {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .result-box
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-box div
+    {
+        width: 200px;
+    }
+
+    .question-top
+    {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
