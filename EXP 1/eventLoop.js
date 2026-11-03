@@ -2,7 +2,7 @@ console.log("Starting task...");
 
 setTimeout(() => {
     console.log("setTimeout: Task completed after delay");
-}, 0);
+}, 10);
 
 setImmediate(() => {
     console.log("setImmediate: Task is ready");
